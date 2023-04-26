@@ -13,3 +13,105 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+  color: rgb(10, 14, 19);
+  text-decoration: none;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-around {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  gap: 40%;
+}
+
+.home-link {
+  margin-bottom: 20px;
+}
+
+.notice,
+.alert {
+  padding: 10px 20px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+}
+
+.notice {
+  background-color: #4CAF50;
+}
+
+.alert {
+  background-color: #f44336;
+}
+
+.navigation-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+.navigation-link:hover {
+  color: #777;
+}
+
+.log-out-link:hover {
+  color: #f44336;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.table tr {
+  border-radius: 20px;
+}
+
+.food-table {
+  border-spacing: 0 15px;
+  width: 90%;
+  text-align: center;
+}
+
+.table-header {
+  background-color: #04090e;
+  color: #fff;
+}
+
+.table-header-cell {
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+}
+
+.List th,
+.List td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.List th {
+  background-color: #ddd;
+}
+
+tr td:nth-child(n+5),
+tr th:nth-child(n+5) {
+  border-radius: 0 0.625rem 0.625rem 0;
+}
+
+tr td:nth-child(1),
+tr th:nth-child(1) {
+  border-radius: 0.625rem 0 0 0.625rem;
+}
