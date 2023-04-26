@@ -14,7 +14,7 @@
  *= require_self
  */
 
- * {
+* {
   color: rgb(10, 14, 19);
   text-decoration: none;
 }
@@ -45,11 +45,11 @@
 }
 
 .notice {
-  background-color: #4CAF50;
+  background-color: #b5e6b6;
 }
 
 .alert {
-  background-color: #f44336;
+  background-color: #f0d1cf;
 }
 
 .navigation-link {
@@ -64,7 +64,7 @@
 }
 
 .log-out-link:hover {
-  color: #f44336;
+  color: #f0d1cf;
 }
 
 .container {
