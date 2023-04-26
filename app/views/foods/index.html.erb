@@ -1,0 +1,44 @@
+<div class="container">
+	<div class="row">
+		<div class="add-btn-container">
+			<%= link_to "Add Food", new_food_path, class: "add-food-btn" %>
+		</div>
+		<div class="col-12">
+			<table class="food-table">
+				<thead class="table-header">
+					<tr>
+						<th class="table-header-cell">Food</th>
+						<th class="table-header-cell">Quantity</th>
+						<th class="table-header-cell">Measurement</th>
+						<th class="table-header-cell">Unit Price</th>
+						<th class="table-header-cell">Action</th>
+					</tr>
+				</thead>
+				<% @foods.each do |food|%>
+				<%= render 'food', food: food %>
+				<% end %>
+			</table>
+		</div>
+	</div>
+</div>
+app\views\foods\new.html.erb
+<div class="">
+	<div class="">
+		<div class="">
+			<div class="">
+				<div>
+					<h1 class="">Add Your Food</h1>
+                     <% if @food.errors.any? %>
+                            <ul>
+                            <% @food.errors.full_messages.each do |msg|%>
+                            <li><%= msg %></li>
+                            <% end %>
+                            </ul>
+                    <% end %>
+
+				</div>
+				<%= render 'form' %>
+            </div>
+        </div>
+    </div>
+</div>
