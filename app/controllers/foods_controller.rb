@@ -1,5 +1,6 @@
 class FoodsController < ApplicationController
   def index
+    # N + 1 optimization
     @foods = current_user.foods.includes(:user)
   end
 
@@ -47,6 +48,7 @@ class FoodsController < ApplicationController
   end
 
   def general
+    # N + 1 optimization
     @foods = current_user.foods.includes([:recipe_foods])
     current_user.recipes.map do |recipe|
       recipe.recipe_foods.map do |recipe_food|
