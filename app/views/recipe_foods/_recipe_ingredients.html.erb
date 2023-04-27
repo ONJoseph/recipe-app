@@ -3,7 +3,7 @@
     <td class="">
       <div class="">
         <div class="">
-          <div class=""><%= recipe_food.food.name %></div>
+          <div class=""><%= recipe_food.food.name%></div>
         </div>
       </div>
     </td>
@@ -15,14 +15,8 @@
     </td>
     <td class=" ">
       <span class="">
-        <i>
-          <%= button_to "Delete ingredient",
-                        "#{recipe_recipe_foods_path(@recipe)}/#{recipe_food.id}",
-                        method: :delete,
-                        data: { confirm: "Are you sure?" },
-                        class: 'delete-button' %>
-        </i>
-      </span>
+        <i><%= button_to "Delete ingredient", "#{recipe_recipe_foods_path(@recipe)}/#{recipe_food.id}", method: :delete, data: { confirm: "Are you sure?" }, class: 'delete-button' %></i>
+        </span>
     </td>
   </tr>
 </tbody>
