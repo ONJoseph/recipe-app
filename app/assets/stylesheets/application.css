@@ -295,7 +295,7 @@ ul {
   justify-content: flex-start;
   width: 70vw;
   margin-bottom: 1px;
-  margin-left: 100px;
+  margin-left: 50px;
 }
 
 .add-btn {
@@ -382,7 +382,7 @@ ul {
 .recipe-description {
   margin-top: 10px;
   font-size: 14px;
-  color: gray;
+  color: black;
   width: 80%;
 }
 
