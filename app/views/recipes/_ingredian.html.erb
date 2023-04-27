@@ -3,9 +3,7 @@
     <td class="">
       <div class="">
         <div class="">
-          <div class="">
-            <%= recipe_food.food.name %>
-          </div>
+          <div class=""><%= recipe_food.food.name%></div>
         </div>
       </div>
     </td>
@@ -15,12 +13,14 @@
     <td class="">
       <%= recipe_food.quantity * recipe_food.food.price %>
     </td>
-    <td class="">
+    <td class=" ">
       <span class="">
-        <i class="">
-          <%= button_to "Delete ingredient", "#{recipe_recipe_foods_path(@recipe)}/#{recipe_food.id}", method: :delete, data: { confirm: "Are you sure?" } %>
-        </i>
-      </span>
+        <i class=""><%= button_to "Delete ingredient", "#{recipe_recipe_foods_path(@recipe)}/#{recipe_food.id}", method: :delete, data: { confirm: "Are you sure?" } %></i>
+        </span>
     </td>
+    <td>
+    <td>
+    <td>
+    <td>
   </tr>
 </tbody>
