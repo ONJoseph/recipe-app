@@ -2,12 +2,19 @@
 	href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
 	rel="stylesheet">
 <div class="recipe-details">
-<h1 class="recipe-name-show">Recipe <%= @recipe.recipe_number %></h1>
+  <h1 class="recipe-name-show">Recipe <%= @recipe.recipe_number %></h1>
   <div class="recipe-info">
+    <div class="info-item">
+      <h2> <%= @recipe.description %></h2>
+    </div>
     <div class="info-item flex-around">
       <p><b>Preparation Time:  <span> <%= @recipe.preparation_time %></span></b></p>
-      <% if @current_user.id == @recipe.user_id %>
-      <div class="public-switch">
+    </div>
+    <div class="info-item">
+      <p><b>Cooking Time: <span> <%= @recipe.cooking_time %></span></b></p>      
+    </div>
+    <% if @current_user.id == @recipe.user_id %>
+      <div class="info-item public-switch">
         <span>Public</span>
         <label for="public-switch">
           <input type="checkbox" id="public-switch" class="" <%= @recipe.public ? 'checked' : '' %>>
@@ -15,14 +22,6 @@
         </label>
       </div>
     <% end %>
-    </div>
-    <div class="info-item">
-    <p><b>Cooking Time: <span> <%= @recipe.cooking_time %></span></b></p>
-      
-    </div>
-    <div class="info-item">
-      <span> <%= @recipe.description %></span>
-    </div>
   </div>
   <div class="actions">
     <div class="action-item">
