@@ -41,10 +41,10 @@ RSpec.describe 'Recipes', type: :feature do
 
     # it '5-When I click on the second Show this recipe, I am redirected to the second recipe details page' do
     #  first_link = page.all(:link, 'Recipes')[1] # Obtener el segundo link
-    #  p 'fl' 
+    #  p 'fl'
     #  p first_link
     #  click_link(href: first_link['href'])
-    #  p current_path 
+    #  p current_path
     #  expect(current_path) == @recipe2_url
     # end
   end
@@ -96,11 +96,11 @@ RSpec.describe 'Recipes', type: :feature do
     end
 
     # context 'Test the Add ingredient button' do
-      # it '13-The Add ingredient button should redirect to the add ingredient page' do
-        #click_button('Add Ingredient')
-        # # expect(current_path).to eq(@add_ingredient_url)
-        # expect(page).to have_content('Create Recipe food')
-      # end
+    # it '13-The Add ingredient button should redirect to the add ingredient page' do
+    # click_button('Add Ingredient')
+    # # expect(current_path).to eq(@add_ingredient_url)
+    # expect(page).to have_content('Create Recipe food')
+    # end
     # end
   end
 end

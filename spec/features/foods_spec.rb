@@ -23,7 +23,6 @@ RSpec.describe 'Food', type: :feature do
   end
 
   context 'The show link should redirect to the food Edit page' do
-    
     context 'Test Food list should contain delete button' do
       it '4-There should contain 3 Delete button' do
         buttons = page.all(:button, 'Delete')
