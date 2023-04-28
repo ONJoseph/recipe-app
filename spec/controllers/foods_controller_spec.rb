@@ -11,9 +11,7 @@ RSpec.describe FoodsController, type: :request do
     before do
       get foods_path
     end
-    # it 'should displays the index template' do
-    #  expect(response).to render_template(:index)
-    # end
+
     it 'should displays the correct title' do
       expect(response.body).to include('Foods')
     end
@@ -25,9 +23,7 @@ RSpec.describe FoodsController, type: :request do
     before do
       get new_food_path
     end
-    # it 'should displays the correct template' do
-    #  expect(response).to render_template(:new)
-    # end
+
     it 'returns a successful response' do
       expect(response).to be_successful
     end
@@ -39,7 +35,6 @@ RSpec.describe FoodsController, type: :request do
       expect(response.body).to include('Measurement')
       expect(response.body).to include('Price')
       expect(response.body).to include('Quantity')
-      # expect(response.body).to include('Create Food')
     end
   end
 
@@ -48,7 +43,6 @@ RSpec.describe FoodsController, type: :request do
       delete food_path(@food)
     end
     it 'should returns a successful response' do
-      # expect(response).to redirect_to(foods_url)
       expect(flash[:notice]).to eq('Food was successfully deleted.')
     end
   end

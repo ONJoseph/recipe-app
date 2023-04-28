@@ -20,11 +20,7 @@ RSpec.describe PublicRecipesController, type: :request do
     it '1-returns a successful response' do
       expect(response).to be_successful
     end
-    # it '2-displays the index template' do
-    #  expect(response).to render_template(:index)
-    # end
     it '3-displays the correct title' do
-      # expect(response.body).to include('Public Recipe')
       expect(response.body).to include('Recipes')
     end
     it '4-displays only the public recipes' do
@@ -35,12 +31,6 @@ RSpec.describe PublicRecipesController, type: :request do
     before do
       get public_recipes_path(@recipe.id)
     end
-    # it '5-returns a successful response' do
-    #  expect(response).to be_successful
-    # end
-    # it '6-displays the index template' do
-    #  expect(response).to render_template(:show)
-    # end
     it '7-displays the name of the recipe' do
       expect(response.body).to include('New recipe')
     end

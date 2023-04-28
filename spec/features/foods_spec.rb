@@ -35,9 +35,6 @@ RSpec.describe 'Food', type: :feature do
         expect(page).to have_content('Add Food')
       end
       it '6-New Button should redirect to correct page' do
-        # new_food_link = page.all(:link, 'ADD FOOD')[0]
-        # click_link(href: new_food_link['href'])
-        # expect(current_path) == new_food_path
         click_link('Add Food')
         expect(page).to have_content('Add Your Food')
       end
@@ -46,13 +43,6 @@ RSpec.describe 'Food', type: :feature do
       it '7-There should contain button deleting food' do
         p expect(page).to have_content('Delete')
       end
-      # it '8-Delete Button should redirect to correct page' do
-      #  # new_food_link = page.all(:link, 'ADD FOOD')[0]
-      #  # click_link(href: new_food_link['href'])
-      #  # expect(current_path) == new_food_path
-      #  click_link('Delete')
-      #  expect(page).to have_content('Food was successfully deleted.')
-      # end
     end
   end
 end
