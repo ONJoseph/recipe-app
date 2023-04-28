@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="./draft.png" alt="logo" width="256"  height="auto" />
+  <img src="./recipes.png" alt="logo" width="860"  height="589" />
   <br/>
 
   <h2><b>Recipe App</b></h2>
@@ -152,12 +152,6 @@ $ rails db:seed
  $ bundle exec rspec
  ```
  </br>
- <div align="center">
-    <kbd>
-    <img alt="gif" src="" width=90% />
-    <p></p>
-       </kbd>
-</div>
 
 ### Install
 - Write: bundle install
