@@ -11,11 +11,13 @@ RSpec.describe FoodsController, type: :request do
     before do
       get foods_path
     end
-
-    it 'should displays the correct title' do
+    it '1-should displays the index template' do
+      expect(response).to render_template(:index)
+     end
+    it '2-should displays the correct title' do
       expect(response.body).to include('Foods')
     end
-    it 'should displays the foods name' do
+    it '3-should displays the foods name' do
       expect(response.body).to include('tomato')
     end
   end
@@ -23,18 +25,21 @@ RSpec.describe FoodsController, type: :request do
     before do
       get new_food_path
     end
-
-    it 'returns a successful response' do
+    it '4-should displays the correct template' do
+      expect(response).to render_template(:new)
+     end
+    it '5-returns a successful response' do
       expect(response).to be_successful
     end
-    it 'displays the correct title' do
+    it '6-displays the correct title' do
       expect(response.body).to include('Add Your Food')
     end
-    it 'displays the correct tags' do
+    it '7-displays the correct tags' do
       expect(response.body).to include('Name')
       expect(response.body).to include('Measurement')
       expect(response.body).to include('Price')
       expect(response.body).to include('Quantity')
+      expect(response.body).to include('Add Your Food') && include('Add Food')
     end
   end
 
@@ -42,7 +47,9 @@ RSpec.describe FoodsController, type: :request do
     before do
       delete food_path(@food)
     end
-    it 'should returns a successful response' do
+    it '8-should returns a successful response' do
+      expect(response).to redirect_to(:root)
+      expect(response).to redirect_to(root_path)
       expect(flash[:notice]).to eq('Food was successfully deleted.')
     end
   end

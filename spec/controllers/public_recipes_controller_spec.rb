@@ -20,6 +20,9 @@ RSpec.describe PublicRecipesController, type: :request do
     it '1-returns a successful response' do
       expect(response).to be_successful
     end
+    it '2-ok-displays the index template' do
+      expect(response).to render_template(:index)
+    end
     it '3-displays the correct title' do
       expect(response.body).to include('Recipes')
     end
@@ -31,6 +34,12 @@ RSpec.describe PublicRecipesController, type: :request do
     before do
       get public_recipes_path(@recipe.id)
     end
+    it '5-ok-returns a successful response' do
+      expect(response).to be_successful
+    end
+    it '6-ok-displays the index template' do
+      expect(response).to render_template(:index)
+     end
     it '7-displays the name of the recipe' do
       expect(response.body).to include('New recipe')
     end

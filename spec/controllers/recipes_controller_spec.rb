@@ -19,6 +19,10 @@ RSpec.describe RecipesController, type: :request do
       expect(response).to be_successful
     end
 
+    it '2-ok-displays the index template' do
+      expect(response).to render_template(:index)
+    end
+
     it '3-displays the correct recipe name' do
       expect(response.body).to include('New recipe')
       expect(response.body).to include('My hotdog recipe')
@@ -33,6 +37,11 @@ RSpec.describe RecipesController, type: :request do
     before do
       get recipe_path(@recipe.id)
     end
+
+    it '5-ok-displays the correct template' do
+      expect(response).to render_template(:show)
+    end
+
     it '6-returns a successful response' do
       expect(response).to be_successful
     end
@@ -51,6 +60,11 @@ RSpec.describe RecipesController, type: :request do
     before do
       get new_recipe_path
     end
+
+    it '9-ok-displays the correct template' do
+      expect(response).to render_template(:new)
+    end
+
     it '10-returns a successful response' do
       expect(response).to be_successful
     end
